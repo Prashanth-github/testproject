@@ -64,9 +64,9 @@
                         <webservice.connectTimeout>${performancetest.connectTimeout}</webservice.connectTimeout>
                         <webservice.responseTimeout>${performancetest.responseTimeout}</webservice.responseTimeout>
                         <threadCount>${performancetest.threadCount}</threadCount>
-                        <loopCount>${performancetest.threadCount}</loopCount>
-						<ExamGroupID>${performancetest.ExamGroupID}</ExamGroupID>
-						<jmeter.save.saveservice.output_format>csv</jmeter.save.saveservice.output_format>
+                        <rampup>${performancetest.rampup}</rampup>
+			<duration>${performancetest.duration}</duration>
+			<jmeter.save.saveservice.output_format>csv</jmeter.save.saveservice.output_format>
                         <jmeter.save.saveservice.bytes>true</jmeter.save.saveservice.bytes>
                         <jmeter.save.saveservice.label>true</jmeter.save.saveservice.label>
                         <jmeter.save.saveservice.latency>true</jmeter.save.saveservice.latency>
