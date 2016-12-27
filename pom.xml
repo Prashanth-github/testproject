@@ -95,6 +95,14 @@
                         </goals>
                         <phase>integration-test</phase>
                     </execution>
+			
+	           <execution>
+                         <id>jmeter-tests</id>
+                         <phase>verify</phase>
+                        <goals>
+                           <goal>jmeter</goal>
+                        </goals>
+	           </execution>
                 </executions>
                 <dependencies>
                     <dependency>
@@ -153,14 +161,7 @@
                 </dependencies>
             </plugin>
 		
-	<execution>
-              <id>jmeter-tests</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>jmeter</goal>
-              </goals>
-	</execution>
-			
+	
 		<plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <executions>
