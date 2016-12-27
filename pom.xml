@@ -186,7 +186,7 @@
                 <artifactId>jmeter-analysis-maven-plugin</artifactId>
                 <version>1.0.4</version>
                 <configuration>
-                    <source>${project.build.directory}/jmeter/results/dummy.jtl</source>
+                    <source>${project.build.directory}/jmeter/results/tag.jtl</source>
                 </configuration>
                 <executions>
                     <execution>
@@ -229,7 +229,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <inputFile>${project.build.directory}/jmeter/results/dummy.jtl</inputFile>
+                    <inputFile>${project.build.directory}/jmeter/results/tag.jtl</inputFile>
                     <graphs>
                         <graph>
                             <pluginType>ThreadsStateOverTime</pluginType>
