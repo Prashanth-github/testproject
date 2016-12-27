@@ -21,8 +21,8 @@
         <performancetest.connectTimeout>1000</performancetest.connectTimeout>
         <performancetest.responseTimeout>3000</performancetest.responseTimeout>
         <performancetest.threadCount>20</performancetest.threadCount>
-        <performancetest.loopCount>10</performancetest.loopCount>
-		<performancetest.ExamGroupID>10</performancetest.ExamGroupID>
+        <performancetest.rampup>10</performancetest.rampup>
+	<performancetest.duration>10</performancetest.duration>
     </properties>
 
     <dependencies>
