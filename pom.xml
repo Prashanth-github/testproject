@@ -94,16 +94,8 @@
                             <goal>jmeter</goal>
                         </goals>
                         <phase>integration-test</phase>
-                    </execution>
-			
-	           <execution>
-                         <id>jmeter-tests</id>
-                         <phase>verify</phase>
-                        <goals>
-                           <goal>jmeter</goal>
-                        </goals>
-	           </execution>
-                </executions>
+                    </execution>			
+	        </executions>
                 <dependencies>
                     <dependency>
                         <groupId>kg.apc</groupId>
