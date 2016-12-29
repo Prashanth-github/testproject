@@ -21,8 +21,7 @@
         <performancetest.connectTimeout>1000</performancetest.connectTimeout>
         <performancetest.responseTimeout>3000</performancetest.responseTimeout>
         <performancetest.threadCount>20</performancetest.threadCount>
-        <performancetest.rampup>10</performancetest.rampup>
-	<performancetest.duration>10</performancetest.duration>
+        <performancetest.loopCount>10</performancetest.loopCount>
     </properties>
 
     <dependencies>
@@ -32,8 +31,7 @@
             <version>2.5</version>
         </dependency>
     </dependencies>
-		
-		
+
     <profiles>
         <profile>
             <id>jenkins</id>
@@ -42,13 +40,12 @@
                 <performancetest.webservice.port>80</performancetest.webservice.port>
                 <performancetest.threadCount>5</performancetest.threadCount>
                 <performancetest.loopCount>5</performancetest.loopCount>
-				<performancetest.ExamGroupID>10</performancetest.ExamGroupID>
             </properties>
         </profile>
     </profiles>
     <build>
         <plugins>
-		    <plugin>
+            <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-maven-plugin</artifactId>
                 <version>1.9.0</version>
@@ -64,18 +61,7 @@
                         <webservice.connectTimeout>${performancetest.connectTimeout}</webservice.connectTimeout>
                         <webservice.responseTimeout>${performancetest.responseTimeout}</webservice.responseTimeout>
                         <threadCount>${performancetest.threadCount}</threadCount>
-                        <rampup>${performancetest.rampup}</rampup>
-			<duration>${performancetest.duration}</duration>
-			<jmeter.save.saveservice.output_format>csv</jmeter.save.saveservice.output_format>
-                        <jmeter.save.saveservice.bytes>true</jmeter.save.saveservice.bytes>
-                        <jmeter.save.saveservice.label>true</jmeter.save.saveservice.label>
-                        <jmeter.save.saveservice.latency>true</jmeter.save.saveservice.latency>
-                        <jmeter.save.saveservice.response_code>true</jmeter.save.saveservice.response_code>
-                        <jmeter.save.saveservice.response_message>true</jmeter.save.saveservice.response_message>
-                        <jmeter.save.saveservice.successful>true</jmeter.save.saveservice.successful>
-                        <jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
-                        <jmeter.save.saveservice.thread_name>true</jmeter.save.saveservice.thread_name>
-                        <jmeter.save.saveservice.time>true</jmeter.save.saveservice.time>
+                        <loopCount>${performancetest.threadCount}</loopCount>
                     </propertiesUser>
                     <propertiesJMeter>
                         <jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
@@ -94,8 +80,8 @@
                             <goal>jmeter</goal>
                         </goals>
                         <phase>integration-test</phase>
-                    </execution>			
-	        </executions>
+                    </execution>
+                </executions>
                 <dependencies>
                     <dependency>
                         <groupId>kg.apc</groupId>
@@ -152,8 +138,8 @@
                     </dependency>
                 </dependencies>
             </plugin>
-		
-	    <plugin>
+
+            <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-analysis-maven-plugin</artifactId>
                 <version>1.0.4</version>
@@ -227,4 +213,3 @@
         </plugins>
     </build>
 </project>
-
