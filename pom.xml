@@ -40,6 +40,7 @@
                 <performancetest.webservice.port>80</performancetest.webservice.port>
                 <performancetest.threadCount>5</performancetest.threadCount>
                 <performancetest.loopCount>5</performancetest.loopCount>
+                <supported.jmeter.version>3.0</supported.jmeter.version>     
             </properties>
         </profile>
     </profiles>
