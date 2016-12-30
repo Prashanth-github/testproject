@@ -149,7 +149,7 @@
                 <artifactId>jmeter-analysis-maven-plugin</artifactId>
                 <version>1.0.4</version>
                 <configuration>
-                    <source>${project.build.directory}/jmeter/results/google_home.jtl</source>
+                    <source>${project.build.directory}/jmeter/results/google_home.csv</source>
                 </configuration>
                 <executions>
                     <execution>
@@ -192,7 +192,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <inputFile>${project.build.directory}/jmeter/results/google_home.jtl</inputFile>
+                    <inputFile>${project.build.directory}/jmeter/results/google_home.csv</inputFile>
                     <graphs>
                         <graph>
                             <pluginType>ThreadsStateOverTime</pluginType>
