@@ -172,7 +172,8 @@
         <executable>java</executable>
         <arguments>
             <argument>-jar</argument>
-            <argument>${project.build.directory}/jmeter/bin/ApacheJMeter.jar -g</argument>
+            <argument>${project.build.directory}/jmeter/bin/ApacheJMeter.jar</argument>
+            <argument>-g</argument>
             <argument>${project.build.directory}/target/jmeter/results/google_home.jtl</argument>
             <argument>-o</argument>
             <argument>${project.build.directory}/target/jmeter/results/dashboard/</argument>
