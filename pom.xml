@@ -166,8 +166,8 @@
                             <mkdir dir="${project.build.directory}/jmeter/results/dashboard" />
                             <copy file="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/src/test/resources/reportgenerator.properties" 
                                   tofile="${project.build.directory}/jmeter/bin/reportgenerator.properties" />
-                            <copy todir="${project.build.directory}/target/jmeter/bin/report-template">
-                                <fileset dir="${project.build.directory}/src/test/resources/report-template" />
+                            <copy todir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/target/jmeter/bin/report-template">
+                                <fileset dir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/src/test/resources/report-template" />
                             </copy>
                             <java jar="${project.build.directory}/target/jmeter/bin/ApacheJMeter.jar" fork="true">
                                 <arg value="-g" />
