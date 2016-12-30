@@ -169,7 +169,7 @@
                             <copy todir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/target/jmeter/bin/report-template">
                                 <fileset dir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/src/test/resources/report-template" />
                             </copy>
-                            <java jar="${project.build.directory}/target/jmeter/bin/ApacheJMeter.jar" fork="true">
+                            <java jar="${project.build.directory}/jmeter/bin/ApacheJMeter.jar" fork="true">
                                 <arg value="-g" />
                                 <arg value="${project.build.directory}/target/jmeter/results/google_home.jtl" />
                                 <arg value="-o" />
