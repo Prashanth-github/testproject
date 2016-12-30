@@ -157,32 +157,29 @@
             </plugin>
 
            <plugin>
-            <artifactId>maven-antrun-plugin</artifactId>
-            <executions>
-                <execution>
-                    <phase>verify</phase>
-                    <configuration>
-                        <tasks>
-                            <mkdir dir="${project.build.directory}/jmeter/results/dashboard" />
-                            <copy file="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/src/test/resources/reportgenerator.properties" 
-                                  tofile="${project.build.directory}/jmeter/bin/reportgenerator.properties" />
-                            <copy todir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/target/jmeter/bin/report-template">
-                                <fileset dir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/src/test/resources/report-template" />
-                            </copy>
-                            <java jar="${project.build.directory}/jmeter/bin/ApacheJMeter.jar" fork="true">
-                                <arg value="-g" />
-                                <arg value="${project.build.directory}/target/jmeter/results/google_home.jtl" />
-                                <arg value="-o" />
-                                <arg value="${project.build.directory}/target/jmeter/results/dashboard/" />
-                            </java>
-                        </tasks>
-                    </configuration>
-                    <goals>
-                        <goal>run</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>exec-maven-plugin</artifactId>
+    <version>1.2.1</version>
+    <executions>
+        <execution>
+            <phase>verify</phase>
+            <goals>
+                <goal>exec</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <executable>java</executable>
+        <arguments>
+            <argument>-jar</argument>
+            <argument>${project.build.directory}/jmeter/bin/ApacheJMeter.jar</argument>
+            <argument>-g</argument>
+            <argument>${project.build.directory}/target/jmeter/results/google_home.jtl</argument>
+            <argument>-o</argument>
+            <argument>${project.build.directory}/target/jmeter/results/dashboard/</argument>
+        </arguments>
+    </configuration>
+</plugin>
 
             <plugin>
                 <!-- To start an embedded jetty with a simple webapp for demonstration purposes -->
