@@ -163,9 +163,9 @@
                     <phase>verify</phase>
                     <configuration>
                         <tasks>
-                            <mkdir dir="${project.build.directory}/target/jmeter/results/dashboard" />
+                            <mkdir dir="${project.build.directory}/jmeter/results/dashboard" />
                             <copy file="${project.build.directory}/src/test/resources/reportgenerator.properties" 
-                                  tofile="${project.build.directory}/target/jmeter/bin/reportgenerator.properties" />
+                                  tofile="${project.build.directory}/jmeter/bin/reportgenerator.properties" />
                             <copy todir="${project.build.directory}/target/jmeter/bin/report-template">
                                 <fileset dir="${project.build.directory}/src/test/resources/report-template" />
                             </copy>
