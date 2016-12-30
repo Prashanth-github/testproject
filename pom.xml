@@ -173,6 +173,7 @@
         <arguments>
             <argument>-jar</argument>
             <argument>${project.build.directory}/jmeter/bin/ApacheJMeter.jar</argument>
+            <argument>-n</argument>
             <argument>-g</argument>
             <argument>${project.build.directory}/target/jmeter/results/google_home.jtl</argument>
             <argument>-o</argument>
