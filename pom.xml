@@ -172,9 +172,9 @@
                             </copy>
                             <java jar="C:\Users\kannan3\Downloads\apache-jmeter-3.1\apache-jmeter-3.1\bin\ApacheJMeter.jar" fork="true">
                                 <arg value="-g" />
-                                <arg value="${project.build.directory}/target/jmeter/results/google_home.jtl" />
+                                <arg value="${project.build.directory}/jmeter/results/google_home.jtl" />
                                 <arg value="-o" />
-                                <arg value="${project.build.directory}/target/jmeter/results/dashboard/" />
+                                <arg value="${project.build.directory}/jmeter/results/dashboard/" />
                             </java>
                         </tasks>
                     </configuration>
