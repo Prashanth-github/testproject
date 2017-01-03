@@ -165,10 +165,10 @@
                     <configuration>
                         <tasks>
                             <mkdir dir="${project.build.directory}/jmeter/results/dashboard" />
-                            <copy file="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/src/test/resources/reportgenerator.properties" 
+                            <copy file="${user.dir}/src/test/resources/reportgenerator.properties" 
                                   tofile="${project.build.directory}/jmeter/bin/reportgenerator.properties" />
-                            <copy todir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/target/jmeter/bin/report-template">
-                                <fileset dir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/src/test/resources/report-template" />
+                            <copy todir="${project.build.directory}/jmeter/bin/report-template">
+                                <fileset dir="${user.dir}/src/test/resources/report-template" />
                             </copy>
                             <java jar="C:\Users\kannan3\Downloads\apache-jmeter-3.1\apache-jmeter-3.1\bin\ApacheJMeter.jar" fork="true">
                                 <arg value="-g" />
