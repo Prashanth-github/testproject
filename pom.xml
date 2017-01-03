@@ -170,7 +170,7 @@
                             <copy todir="${project.build.directory}/jmeter/bin/report-template">
                                 <fileset dir="${user.dir}/src/test/resources/report-template" />
                             </copy>
-                            <java jar="${user.dir}/src/test/resources/ApacheJMeter-3.1.jar" fork="true">
+                            <java jar="C:\Users\kannan3\Downloads\apache-jmeter-3.1\apache-jmeter-3.1\bin\ApacheJMeter.jar" fork="true">
                                 <arg value="-g" />
                                 <arg value="${project.build.directory}/jmeter/results/google_home.jtl" />
                                 <arg value="-o" />
